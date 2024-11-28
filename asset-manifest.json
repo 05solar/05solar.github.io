@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/-WSD-Assignment-02/static/css/main.91bf3ae6.css",
+    "main.js": "/-WSD-Assignment-02/static/js/main.acd63500.js",
+    "index.html": "/-WSD-Assignment-02/index.html",
+    "main.91bf3ae6.css.map": "/-WSD-Assignment-02/static/css/main.91bf3ae6.css.map",
+    "main.acd63500.js.map": "/-WSD-Assignment-02/static/js/main.acd63500.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.91bf3ae6.css",
+    "static/js/main.acd63500.js"
+  ]
+}
