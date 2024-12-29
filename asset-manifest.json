@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.26e67036.css",
+    "main.js": "/static/js/main.651d77de.js",
+    "static/media/kakao_logo.png": "/static/media/kakao_logo.1cf5a336d3e7de9b3c6e.png",
+    "index.html": "/index.html",
+    "main.26e67036.css.map": "/static/css/main.26e67036.css.map",
+    "main.651d77de.js.map": "/static/js/main.651d77de.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.26e67036.css",
+    "static/js/main.651d77de.js"
+  ]
+}
