@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Check Homework</title>
+  <link rel="stylesheet" href="homework.css">
+</head>
+<body>
+  <header>영어 과외 숙제 확인</header>
+
+  <div class="tabs">
+    <button class="tab-button active" onclick="showPanel(0)">안서현</button>
+    <button class="tab-button" onclick="showPanel(1)">권민지</button>
+  </div>
+
+  <div class="panel active"> <!-- 안서현 패널 -->
+    <div class="homework-box">
+      <h3>오늘의 숙제</h3>
+      <p>1. 수능특강 숙제 170p ~ 191p</p>
+    </div>
+
+    <h3>수업 시간 확인하기</h3>
+    <div class="calendar" id="calendar1"></div>
+    <div class="schedule-box" id="schedule1" >
+        <div class="event-card">
+          
+        </div>
+      </div>
+      
+
+    <div class="lesson-time">수업시간 월, 목 20:00 ~ 22:00</div>
+  </div>
+
+  <div class="panel"> <!-- 권민지 패널 -->
+    <div class="homework-box">
+      <h3>오늘의 숙제</h3>
+      <p>1. 수능 보카 2000+ day 7,8 암기</p>
+      <p>2. 영어 시험지 사진 찍어서 보내기</p>
+      <p>3. 자이스토리 296p ~ 308p 풀어오기</p>
+    </div>
+
+    <h3>수업시간 확인하기</h3>
+    <div class="calendar" id="calendar2"></div>
+    <div class="schedule-box" id="schedule2">
+        <div class="event-card">
+          
+        </div>
+      </div>
+      
+
+    <div class="lesson-time">수업시간 수,금 19:00 ~ 21:00</div>
+  </div>
+
+  <script src="homework.js"></script>
+</body>
+</html>

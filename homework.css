@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+  body {
+    font-family: 'GmarketSansMedium', sans-serif;
+    background-color: #F8F8F8; /* 배경 색깔 */
+    margin: 0;
+    padding: 0;
+    max-width: 450px;
+    margin: auto;
+
+  }
+  
+  header {
+    background-color: #303948; /* 제목 배경 색깔  */
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+    
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    background-color: #303948;          /* 주석 */
+    padding: 10px;
+  }
+  
+  .tab-button {
+    flex: 1;
+    padding: 10px;
+    margin: 0 5px;
+    background-color: #303948;      /* 주석 */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  
+  .tab-button.active {
+    background-color: #272E3A;          /* 주석 */
+  }
+  
+  .panel {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .panel.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  
+  .homework-box {
+    border: 2px solid #272E3A;          /* 숙제 박스 테두리 색상  */
+    padding: 15px;
+    background-color: white;        /* 숙제 박스 내부 색상  */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+  }
+  
+  .calendar div {
+    padding: 10px;
+    background-color: white;            /* 달력 색상  */
+    border-radius: 4px;
+  }
+  
+  .calendar .has-event {
+    background-color: #b66475;          /* 달력 일정있는 날 내부 색상  */
+    font-weight: bold;
+    border: 1px solid #C94663;          /* 달력 일정있는 날 테두리 색상  */
+  }
+  
+
+  
+  .schedule-box {
+    margin-top: 15px;
+    font-weight: bold;
+    border: 2px solid #272E3A;          /* 스케줄 상자 테두리 색상  */
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+
+  }
+  
+  .lesson-time {
+    margin: 20px 0;
+    border: 2px solid #272E3A;          /* 수업시간 상자 테두리 색상  */
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: white;
+  }
+  
