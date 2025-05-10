@@ -1,7 +1,7 @@
 const scheduleData1 = { //안서현 파트
     '1': '수업',
     '8': '수업',
-    '12': '수업',
+    '12': '숙제 : <br> 1. 수능특강 숙제 170p ~ 191p',
     '15': '수업',
     '19': '수업',
     '22': '수업',
@@ -11,7 +11,7 @@ const scheduleData1 = { //안서현 파트
   
   const scheduleData2 = { //권민지 파트 
     '9': '수업',
-    '14': '수업',
+    '14': '숙제 :<br> 1. 수능 보카 2000+ day 7,8 암기<br> 2. 영어 시험지 사진 찍어서 보내기<br> 3. 자이스토리 296p ~ 308p 풀어오기 ',
     '16': '수업',
     '21': '수업',
     '23': '수업',
@@ -32,9 +32,27 @@ const scheduleData1 = { //안서현 파트
     });
   }
   
-function generateCalendar(containerId, scheduleBoxId, scheduleData) {
+  let selectedDateDiv = null; // 현재 선택된 날짜를 추적
+
+function generateCalendar(containerId, scheduleBoxId, scheduleData, firstDayOfWeek) {
   const calendar = document.getElementById(containerId);
   const scheduleBox = document.getElementById(scheduleBoxId);
+
+  const daysOfWeek = ['일', '월', '화', '수', '목', '금', '토'];
+  daysOfWeek.forEach(day => {
+    const dayDiv = document.createElement('div');
+    dayDiv.textContent = day;
+    dayDiv.style.fontWeight = 'bold';
+    dayDiv.style.backgroundColor = '#eee';
+    dayDiv.style.borderRadius = '4px';
+    calendar.appendChild(dayDiv);
+  });
+
+  for (let i = 0; i < firstDayOfWeek; i++) {
+    const emptyDiv = document.createElement('div');
+    emptyDiv.innerHTML = '&nbsp;';
+    calendar.appendChild(emptyDiv);
+  }
 
   for (let day = 1; day <= 31; day++) {
     const div = document.createElement('div');
@@ -49,13 +67,20 @@ function generateCalendar(containerId, scheduleBoxId, scheduleData) {
     }
 
     div.addEventListener('click', () => {
-      scheduleBox.innerHTML = '';  // 기존 내용 지우기
+      // 이전 선택된 날짜가 있으면 클래스 제거
+      if (selectedDateDiv) {
+        selectedDateDiv.classList.remove('selected-day');
+      }
+      // 새로 클릭한 날짜에 클래스 추가
+      div.classList.add('selected-day');
+      selectedDateDiv = div;
 
+      // 스케줄 표시
+      scheduleBox.innerHTML = '';
       const event = scheduleData[day];
       const card = document.createElement('div');
       card.classList.add('event-card');
-      card.textContent = event || '📭 No events today';
-
+      card.innerHTML = event || '📭 이 날은 수업이 없습니다! ';
       scheduleBox.appendChild(card);
     });
 
@@ -63,8 +88,9 @@ function generateCalendar(containerId, scheduleBoxId, scheduleData) {
   }
 }
 
+
   
   // 각 탭별로 서로 다른 일정 전달
-  generateCalendar('calendar1', 'schedule1', scheduleData1);
-  generateCalendar('calendar2', 'schedule2', scheduleData2);
+  generateCalendar('calendar1', 'schedule1', scheduleData1,4);
+  generateCalendar('calendar2', 'schedule2', scheduleData2,4);
   
