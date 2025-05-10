@@ -10,7 +10,7 @@
     background-color: #F8F8F8; /* 배경 색깔 */
     margin: 0;
     padding: 0;
-    max-width: 330px;
+    max-width: 350px;
     margin: auto;
 
   }
@@ -86,6 +86,12 @@
     background-color: #b66475;          /* 달력 일정있는 날 내부 색상  */
     font-weight: bold;
     border: 1px solid #C94663;          /* 달력 일정있는 날 테두리 색상  */
+  }
+  
+  .calendar .selected-day {
+    background-color: #C94663 !important; /* 선택된 날짜 색상 */
+    color: white;
+    border: 1px solid #682332;
   }
   
 
